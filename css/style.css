@@ -1,0 +1,44 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+/* Variables */
+:root {
+    /* ### Colors: */
+    /* Light Theme */
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+    --Light-Grayish-Blue: hsl(233, 11%, 84%);
+    --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+    --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+    /* Dark Theme */
+    --Very-Dark-Blue: hsl(235, 21%, 11%);
+    --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+    --Light-Grayish-Blue: hsl(234, 39%, 85%);
+    --Light-Grayish-Blue: hsl(236, 33%, 92%); /* hover */
+    --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+    --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+    --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+    /* --------------------------------- */
+    /* ### Animations: */
+    /* # Transition */
+    --transition: ease-in-out 300ms
+}
+/* GLobal Rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box
+}
+ul {
+    list-style: none
+}
+/* Body & Html */
+html,
+body {
+    font-size: 18px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    font-family: 'Josefin Sans', sans-serif
+}
