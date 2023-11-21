@@ -13,9 +13,7 @@
     --Very-Dark-Blue: hsl(235, 21%, 11%);
     --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
     --Light-Grayish-Blue: hsl(234, 39%, 85%);
-    --Light-Grayish-Blue: hsl(236, 33%, 92%); /* hover */
     --Dark-Grayish-Blue: hsl(234, 11%, 52%);
-    --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
     --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
     /* --------------------------------- */
     /* ### Animations: */
@@ -42,3 +40,208 @@ body {
     position: relative;
     font-family: 'Josefin Sans', sans-serif
 }
+button {
+    cursor: pointer;
+}
+/* Transition */
+.app .to-do .to-do-controls .to-do-list-control ul li,
+.app .to-do .to-do-controls .to-do-list-control ul li::before {
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+/* Start App */
+.app {
+    height: 100vh;
+    position: relative;
+}
+/* Head */
+.app .head {
+    height: 30%;
+    background-size: cover;
+}
+/* Body */
+.app .body {
+    height: 70%;
+}
+/* To Do */
+.app .to-do {
+    top: 100px;
+    left: 50%;
+    width: 500px;
+    max-width: 500px;
+    position: absolute;
+    margin-bottom: 15px;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+}
+.app .to-do .to-do-head {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+.app .to-do .to-do-head .btn-change-mood {
+    cursor: pointer;
+}
+.app .to-do .to-do-head .btn-change-mood i {
+    display: none;
+}
+/* Add todo */
+.app .to-do .to-do-add-task {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.app .to-do .to-do-add-task form {
+    position: relative;
+}
+.app .to-do .to-do-add-task form input {
+    width: 100%;
+    border: none;
+    padding: 20px;
+    background-color: transparent;
+}
+.app .to-do .to-do-add-task form input:focus {
+    outline: none;
+}
+.app .to-do .to-do-add-task form button {
+    top: 0;
+    padding: 0;
+    padding: 10px;
+    right: 10px;
+    height: 100%;
+    border: none;
+    font-size: 1.4rem;
+    position: absolute;
+    background-color: transparent;
+}
+.app .to-do .to-do-tasks {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.app .to-do .to-do-tasks .to-do-task {
+    display: flex;
+    cursor: pointer;
+    padding: 15px;
+    align-items: center;
+    border-bottom: solid 1px var(--Light-Grayish-Blue);
+}
+.app .to-do .to-do-tasks .to-do-task.completed {
+    opacity: .75;
+}
+.app .to-do .to-do-tasks .to-do-task input {
+    margin-right: 10px;
+}
+.app .to-do .to-do-tasks .to-do-task.completed p {
+    text-decoration: line-through;
+}
+.app .to-do .to-do-controls {
+    display: flex;
+    padding: 10px;
+    column-gap: 10px;
+    align-items: center;
+    color: var(--Dark-Grayish-Blue);
+    justify-content: space-between;
+}
+.app .to-do .to-do-controls .remaining-items {
+    font-size: 16px;
+}
+.app .to-do .to-do-controls .to-do-list-control ul {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.app .to-do .to-do-controls .to-do-list-control ul li {
+    opacity: .75;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 0;
+}
+.app .to-do .to-do-controls .to-do-list-control ul li:hover,
+.app .to-do .to-do-controls .to-do-list-control ul li.active {
+    opacity: 1;
+    color: cornflowerblue;
+}
+.app .to-do .to-do-controls .to-do-list-control ul li::before {
+    bottom: 0;
+    content: '';
+    left: 0;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    background-color: cornflowerblue;
+}
+.app .to-do .to-do-controls .to-do-list-control ul li:hover::before,
+.app .to-do .to-do-controls .to-do-list-control ul li.active::before {
+    width: 100%;
+}
+.app .to-do .to-do-controls button.to-do-clear-completed {
+    border: 0;
+    padding: 10px 0;
+    color: var(--Dark-Grayish-Blue);
+    background-color: transparent;
+}
+/* Start Light Mood */
+/* Head */
+.light-mood .head {
+    background-image: url(../images/bg-desktop-light.jpg);
+}
+/* Body */
+.light-mood .body {
+    background-color: var(--Very-Light-Gray);
+}
+/* To Do */
+.light-mood .to-do .to-do-head .btn-change-mood i.light-mood {
+    display: block;
+}
+/* Add todo */
+.light-mood .to-do .to-do-add-task {
+    background-color: white;
+}
+.light-mood .to-do .to-do-tasks {
+    background-color: white;
+}
+/* End Light Mood */
+/* Start Dark Mood */
+/* Head */
+.dark-mood {
+    color: var(--Light-Grayish-Blue);
+}
+.dark-mood .head {
+    background-image: url(../images/bg-desktop-dark.jpg);
+}
+/* Body */
+.dark-mood .body {
+    background-color: var(--Very-Dark-Blue);
+}
+/* To Do */
+.dark-mood .to-do .to-do-head .btn-change-mood i.dark-mood {
+    display: block;
+}
+/*  */
+.dark-mood .to-do .to-do-add-task form input,
+.dark-mood .to-do .to-do-head .btn-change-mood i,
+.dark-mood .to-do .to-do-add-task form button {
+    color: white;
+}
+.dark-mood .to-do .to-do-add-task,
+.dark-mood .to-do .to-do-tasks {
+    background-color: var(--Very-Dark-Desaturated-Blue);
+}
+/* End Dark Mood */
+/* End App */

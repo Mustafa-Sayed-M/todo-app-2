@@ -12,6 +12,59 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Start App -->
+  <div class="app dark-mood">
+    <!-- The Part Head -->
+    <div class="head"></div>
+    <!-- The Part Body -->
+    <div class="body"></div>
+    <!-- The Part To Do -->
+    <div class="to-do">
+      <div class="to-do-head">
+        <div class="logo">
+          TO DO
+        </div>
+        <div class="btn-change-mood">
+          <i class="fa-solid fa-moon light-mood"></i>
+          <i class="fa-solid fa-sun dark-mood"></i>
+        </div>
+      </div>
+      <div class="to-do-add-task">
+        <form>
+          <input type="text" placeholder="Create a new todo...">
+          <button type="text" class="btn-add-todo">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </form>
+      </div>
+      <div class="to-do-tasks">
+        <div class="to-do-task completed">
+          <input type="checkbox" checked>
+          <p>Task Text Content</p>
+        </div>
+        <div class="to-do-task">
+          <input type="checkbox">
+          <p>Task Text Content</p>
+        </div>
+        <div class="to-do-controls">
+          <div class="remaining-items">
+            5 Items left
+          </div>
+          <div class="to-do-list-control">
+            <ul>
+              <li class="active">All</li>
+              <li>Active</li>
+              <li>Completed</li>
+            </ul>
+          </div>
+          <button type="button" class="to-do-clear-completed">
+            Clear Completed
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End App -->
   <!-- Js Script File -->
   <script src="js/script.js"></script>
 </body>
