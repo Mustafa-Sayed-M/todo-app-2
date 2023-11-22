@@ -44,6 +44,7 @@ button {
     cursor: pointer;
 }
 /* Transition */
+.app .to-do .to-do-tasks .to-do-task,
 .app .to-do .to-do-controls .to-do-list-control ul li,
 .app .to-do .to-do-controls .to-do-list-control ul li::before {
     transition: var(--transition);
@@ -70,10 +71,11 @@ button {
 .app .to-do {
     top: 100px;
     left: 50%;
+    z-index: 10;
     width: 500px;
     max-width: 500px;
     position: absolute;
-    margin-bottom: 15px;
+    padding-bottom: 10px;
     transform: translate(-50%);
     -webkit-transform: translate(-50%);
     -moz-transform: translate(-50%);
@@ -126,24 +128,31 @@ button {
     background-color: transparent;
 }
 .app .to-do .to-do-tasks {
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -ms-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
 }
 .app .to-do .to-do-tasks .to-do-task {
     display: flex;
-    cursor: pointer;
     padding: 15px;
+    cursor: pointer;
     align-items: center;
     border-bottom: solid 1px var(--Light-Grayish-Blue);
 }
 .app .to-do .to-do-tasks .to-do-task.completed {
-    opacity: .75;
+    opacity: .5;
 }
 .app .to-do .to-do-tasks .to-do-task input {
     margin-right: 10px;
+}
+.app .to-do .to-do-tasks .to-do-task input:checked {
+    accent-color: hsl(254, 56%, 45%);
+}
+.app .to-do .to-do-tasks p.no-tasks-added-yet {
+    padding: 20px 0;
+    text-align: center;
 }
 .app .to-do .to-do-tasks .to-do-task.completed p {
     text-decoration: line-through;
@@ -151,10 +160,20 @@ button {
 .app .to-do .to-do-controls {
     display: flex;
     padding: 10px;
-    column-gap: 10px;
     align-items: center;
+    margin-bottom: 30px;
     color: var(--Dark-Grayish-Blue);
     justify-content: space-between;
+    border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    -ms-border-radius: 0 0 5px 5px;
+    -o-border-radius: 0 0 5px 5px;
+}
+.app .to-do .to-do-controls  + p {
+    opacity: .6;
+    font-size: 14px;
+    text-align: center;
 }
 .app .to-do .to-do-controls .remaining-items {
     font-size: 16px;
@@ -206,6 +225,9 @@ button {
     background-color: var(--Very-Light-Gray);
 }
 /* To Do */
+.light-mood .to-do {
+    box-shadow: 0 0 30px -10px var(--Dark-Grayish-Blue);
+}
 .light-mood .to-do .to-do-head .btn-change-mood i.light-mood {
     display: block;
 }
@@ -213,7 +235,8 @@ button {
 .light-mood .to-do .to-do-add-task {
     background-color: white;
 }
-.light-mood .to-do .to-do-tasks {
+.light-mood .to-do .to-do-tasks,
+.app .to-do .to-do-controls {
     background-color: white;
 }
 /* End Light Mood */
@@ -240,7 +263,8 @@ button {
     color: white;
 }
 .dark-mood .to-do .to-do-add-task,
-.dark-mood .to-do .to-do-tasks {
+.dark-mood .to-do .to-do-tasks,
+.dark-mood .to-do .to-do-controls {
     background-color: var(--Very-Dark-Desaturated-Blue);
 }
 /* End Dark Mood */
