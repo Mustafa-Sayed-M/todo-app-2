@@ -44,6 +44,7 @@ button {
     cursor: pointer;
 }
 /* Transition */
+.app .body,
 .app .to-do .to-do-tasks .to-do-task,
 .app .to-do .to-do-controls .to-do-list-control ul li,
 .app .to-do .to-do-controls .to-do-list-control ul li::before {
@@ -204,6 +205,21 @@ button {
     height: 2px;
     position: absolute;
     background-color: cornflowerblue;
+}
+@media (max-width: 500px) {
+    .app .to-do {
+        max-width: 320px;
+    }
+    .app .to-do .to-do-controls {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+    .app .to-do .to-do-controls .remaining-items,
+    .app .to-do .to-do-controls .to-do-clear-completed,
+    .app .to-do .to-do-controls .to-do-list-control {
+        width: 100%;
+        text-align: center;
+    }
 }
 .app .to-do .to-do-controls .to-do-list-control ul li:hover::before,
 .app .to-do .to-do-controls .to-do-list-control ul li.active::before {

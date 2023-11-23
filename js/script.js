@@ -56,7 +56,6 @@ function createTask() {
         completed: false
     }
     addTaskToArr(task, arrOfTasks);
-    console.log(arrOfTasks);
 }
 // # Function to add task to arr
 function addTaskToArr(task, arr) {
@@ -69,9 +68,9 @@ function addTasksToPage(arr) {
         const taskEle = document.createElement('div');
         taskEle.dataset.id = id;
         taskEle.setAttribute("onclick", "completeTask(this)")
-        taskEle.className = `to-do-task ${completed ? "completed" : null}`;
+        taskEle.className = `to-do-task ${completed ? "completed" : ''}`;
         taskEle.innerHTML = `
-            <input type="checkbox" ${completed ? "checked" : null}>
+            <input type="checkbox" ${completed ? "checked" : ''}>
             <p>${value}</p>
         `
         tasksDiv.appendChild(taskEle);
